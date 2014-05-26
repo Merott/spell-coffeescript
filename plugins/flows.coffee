@@ -12,6 +12,7 @@ module.exports = ( warlock ) ->
     source_options:
       base: "<%= paths.source_app %>"
     tasks: [ 'webapp-build' ]
+    passive: true
   .add( 10, 'coffeescript-lint.lint', coffeelint )
   .add( 11, 'coffeescript-lint.report', coffeelint.reporter )
   .add( 12, 'coffeescript-lint.failOnError', lintFn )
