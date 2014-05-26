@@ -36,10 +36,7 @@
         "coffeescript": [
           "<%= paths.source_app %>/**/*.coffee",
           "<%= paths.source_app %>/**/*.coffee.md",
-          "<%= paths.source_app %>/**/*.coffee.markdown",
-          "!<%= paths.source_app %>/**/*.spec.coffee",
-          "!<%= paths.source_app %>/**/*.spec.coffee.md",
-          "!<%= paths.source_app %>/**/*.spec.coffee.markdown"
+          "<%= paths.source_app %>/**/*.coffee.markdown"
         ]
       }
     },
