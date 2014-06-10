@@ -44,6 +44,14 @@
       "coffeescript-lint": {
         "failOnError": {
           "fail": true
+        },
+        "lint": {
+          "use_strict": {
+            "module": "coffeelint-use-strict",
+            "level": "error",
+            "allowGlobal": true,
+            "requireGlobal": false
+          }
         }
       },
       "coffeescript-compile": {
@@ -53,6 +61,7 @@
   },
   "dependencies": {
     "gulp-coffee": "^1.4.1",
-    "gulp-coffeelint": "^0.3.2"
+    "gulp-coffeelint": "^0.3.2",
+    "coffeelint-use-strict": "0.0.1"
   }
 }
