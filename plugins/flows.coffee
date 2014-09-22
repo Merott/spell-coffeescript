@@ -1,5 +1,6 @@
 coffee = require 'gulp-coffee'
 coffeelint = require 'gulp-coffeelint'
+sourcemaps = require('gulp-sourcemaps');
 
 module.exports = ( warlock ) ->
   lintFn = ( options ) ->
@@ -27,5 +28,6 @@ module.exports = ( warlock ) ->
   .add( 10, 'coffeescript-lint.lint', coffeelint )
   .add( 11, 'coffeescript-lint.report', coffeelint.reporter )
   .add( 12, 'coffeescript-lint.failOnError', lintFn )
-  .add( 50, 'coffeescript-compile', coffee )
-
+  .add( 50, 'coffeescript-sourcemaps-init', sourcemaps.init )
+  .add( 51, 'coffeescript-compile', coffee )
+  .add( 52, 'coffeescript-sourcemaps-write', sourcemaps.write )
